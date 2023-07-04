@@ -7,8 +7,17 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem id="menu_learning_system" name="LMS">
-        <menuitem id="menu_Learning" name="Settings">
-            <menuitem id = "settings" name="Corses" action="lms_action"/>
+        <menuitem id="menu_Learning" name="Learning">
+            <menuitem id = "settings" name="LSM" action="lms_action"/>
+        </menuitem> 
+        <menuitem id="menu_course" name="Courses">
+            <menuitem id="menu_action_coursetypes" name= "Course Types" action="lms_course_types_action"/>
+        </menuitem>
+        <menuitem id = "menu_users" name="Users">
+            <menuitem id="menu_action_usertypes" name= "User Types" action="lms_user_types_action"/>
+        </menuitem>
+        <menuitem id = "menu_assignments" name="Assignments">
+            <menuitem id="menu_action_assignments" name= "Assignments" action="lms_assignment_action"/>
         </menuitem>
     </menuitem>
 </odoo>
