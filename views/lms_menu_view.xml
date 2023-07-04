@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="lms_action" model="ir.actions.act_window">
+        <field name="name">Learning Management System</field>
+        <field name="res_model">learning.system</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_learning_system" name="LMS">
+        <menuitem id="menu_Learning" name="Settings">
+            <menuitem id = "settings" name="Corses" action="lms_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>
