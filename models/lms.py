@@ -13,8 +13,6 @@ class learning_system(models.Model):
     postcode = fields.Char(string = 'postcode', required = True)
     description = fields.Text(string ='description', required = True)
     date  = fields.Date(string ='date', default=lambda self:fields.Date.today())
-    course_type_id=fields.Many2one('learning.system.types',string='Course Type', copy = False)
-    user_ids=fields.Many2many("learning.system.user.types", string="User Type")
-    assignment_ids=fields.One2many('learning.system.assignment','course_id')
+
 
 

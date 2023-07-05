@@ -6,7 +6,6 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="user_ids"/>
                 <field name="gender"/>
                 <field name="email"/>
                 <field name="phone"/>
@@ -14,8 +13,6 @@
                 <field name="description"/>
                 <field name="postcode"/>
                 <field name="date"/>
-                <field name="course_type_id"/>
-                <field name="assignment_ids"/>
             </tree>
         </field>
     </record>
@@ -30,12 +27,9 @@
                     <group>
                         <group>
                             <field name="name"/>
-                        <field name="user_ids" widget="many2many_tags"/>
                             <field name="gender"/>
                             <field name="email"/>
                             <field name="date"/>
-                            <field name="course_type_id"/>
-                            <field name="assignment_ids"/>
                         </group>
                         <group>
                             <field name="phone"/>

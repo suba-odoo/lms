@@ -10,8 +10,8 @@
         'security/ir.model.access.csv',
         'views/lms_views.xml',
         'views/lms_course_types_view.xml',
-        'views/lms_user_types_view.xml',
         'views/lms_assignment_view.xml',
+        'views/lms_enrollment_view.xml',
         'views/lms_menu_view.xml',
     
     ],
