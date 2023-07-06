@@ -11,6 +11,7 @@ class learning_enrollment(models.Model):
     status=fields.Selection(selection=[("CO","conform"),("CA","cancel")],copy= False)
     student_id = fields.Many2one('learning.system',string="Student Name",copy=False)
     course_id = fields.Many2one('learning.system.types',string="Course Name",required = True,copy=False)
+    state = fields.Selection(string = 'State', selection=[('N','New'), ('P','Process'), ('C','Completed')])
 
     def action_conform(self):
         for i in self:

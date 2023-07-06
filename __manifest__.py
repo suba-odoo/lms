@@ -12,6 +12,7 @@
         'views/lms_course_types_view.xml',
         'views/lms_assignment_view.xml',
         'views/lms_enrollment_view.xml',
+        'views/lms_assignment_sub_view.xml',
         'views/lms_menu_view.xml',
     
     ],

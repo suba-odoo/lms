@@ -3,4 +3,5 @@ lms.access_learning_system,access_learning_system,lms.model_learning_system,base
 lms.access_learning_system_types,access_learning_system_types,lms.model_learning_system_types,base.group_user,1,1,1,1
 lms.access_learning_system_assignment,access_learning_system_assignment,lms.model_learning_system_assignment,base.group_user,1,1,1,1
 lms.access_learning_system_enrollment,access_learning_system_enrollment,lms.model_learning_system_enrollment,base.group_user,1,1,1,1
+lms.access_learning_system_assignment_submission,access_learning_system_assignment_submission,lms.model_learning_system_assignment_submission,base.group_user,1,1,1,1
 
