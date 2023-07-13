@@ -31,6 +31,11 @@
         <field name="arch" type="xml">
             <form string="Type">
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(lms.lms_enrollment_action)d" type="action" class="oe_stat_button" icon="fa-graduation-cap">
+                            <field name="enroll_count" widget="statinfo" string="Enrollment"/>
+                        </button>
+                    </div>
                     <group>
                         <field name="name"/>
                         <field name="Institute_id"/>

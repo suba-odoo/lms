@@ -1,5 +1,5 @@
 from odoo import fields, models, api
-from dateutil.relativedelta import relativedelta
+
 
 class learning_assignment_submission(models.Model):
     _name = 'learning.system.assignment.submission'
