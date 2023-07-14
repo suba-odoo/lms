@@ -4,7 +4,7 @@
     <record id="lms_enrollment_action" model="ir.actions.act_window">
         <field name="name">Enrollment</field>
         <field name="res_model">learning.system.enrollment</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No Records Found. Let's create New one!
@@ -44,6 +44,31 @@
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+
+    <record id="estate_property_view_kanban" model="ir.ui.view">
+        <field name="name">estate.property.view.kanban</field>
+        <field name="model">learning.system.enrollment</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="course_id" records_draggable="False">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <field name="student_id"/>
+                            <div>
+                                Enrollment Date:
+                                <field name="date"/>
+                            </div>
+                            <div t-if="record.status = 'CO'">
+                                State:
+                                <field name="state"/>
+                            </div>                          
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 

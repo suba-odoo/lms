@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="lms_action" model="ir.actions.act_window">
+        <field name="name">Learning Management System</field>
+        <field name="res_model">learning.system</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="learning_system_view_tree" model="ir.ui.view">
         <field name="name">learning.system.view.tree</field>
         <field name="model">learning.system</field>
@@ -24,6 +30,7 @@
         <field name="arch" type="xml">
             <form string="Type">
                 <sheet>
+                    <field name="image" widget='image' nolabel='1' class="oe_avatar"/>
                     <group>
                         <group>
                             <field name="name"/>

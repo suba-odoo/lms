@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="demo_student_1" model="learning.system">
+            <field name="name">nikhil</field>
+            <field name="email">nikil@gmail.com</field>
+            <field name="phone">298764296</field>
+            <field name="postcode">372864</field>
+            <field name="address">Gujarath</field>
+            <field name="gender">M</field>
+            <field name="description">Student</field>
+        </record>
+
+        <record id="demo_student_2" model="learning.system">
+            <field name="name">shubam</field>
+            <field name="email">shubam@gmail.com</field>
+            <field name="phone">87264287745</field>
+            <field name="postcode">294762</field>
+            <field name="address">gandhinagar</field>
+            <field name="description">student</field>
+            <field name="gender">M</field>
+        </record>
+    </data>
+</odoo>

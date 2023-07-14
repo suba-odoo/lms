@@ -13,6 +13,7 @@ class learning_system(models.Model):
     postcode = fields.Char(string = 'postcode', required = True)
     description = fields.Text(string ='description', required = True)
     date  = fields.Date(string ='date', default=lambda self:fields.Date.today())
+    image = fields.Binary(string ='image')
 
 
 

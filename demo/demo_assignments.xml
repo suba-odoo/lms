@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="assignment_1" model="learning.system.assignment">
+        <field name="name">quiz</field> 
+        <field name="course_id" ref="lms.course_1" />
+        <field name="status">N</field>
+        <field name="validity">15</field>
+    </record>
+
+    <record id="offer_2" model="learning.system.assignment">
+        <field name="name">test</field>
+        <field name="course_id" ref="lms.course_2" />
+        <field name="status">N</field>
+        <field name="validity">15</field>
+    </record>
+
+    <record id="offer_3" model="learning.system.assignment">
+        <field name="name">mcq</field>
+        <field name="course_id" ref="lms.course_3"/>
+        <field name="status">N</field>
+        <field name="validity">15</field>
+    </record>
+</odoo>

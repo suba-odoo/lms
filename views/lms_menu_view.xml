@@ -7,8 +7,8 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem id="menu_learning_system" name="LMS">
-        <menuitem id="menu_Learning" name="Learning">
-            <menuitem id = "settings" name="LSM" action="lms_action"/>
+        <menuitem id="menu_Learning" name="Enrollment">
+            <menuitem id = "mennu_action_enroll" name="Enrollment" action="lms_enrollment_action"/>
         </menuitem> 
         <menuitem id="menu_course" name="Courses">
             <menuitem id="menu_action_coursetypes" name= "Course Types" action="lms_course_types_action"/>
@@ -18,8 +18,8 @@
             <menuitem id="menu_action_assignment_submission" name="Assignment Submissions" action="lms_assignment_submission_action"/>
             <menuitem id="menu_action_grade" name="Grade" action="lms_grade_action"/>
         </menuitem>
-        <menuitem id ="menu_enrollment" name="Enrollment">
-            <menuitem id="menu_action_enrollment" name = "Enrollment" action="lms_enrollment_action"/>
+        <menuitem id ="menu_enrollment" name="Students">
+            <menuitem id="menu_action_student" name = "Registation" action="lms_action"/>
         </menuitem>
     </menuitem>
 </odoo>

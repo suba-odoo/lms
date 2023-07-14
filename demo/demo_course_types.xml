@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="course_1" model="learning.system.types">
+            <field name="name">Python</field>
+        </record>
+
+        <record id="course_2" model="learning.system.types">
+            <field name="name">Java</field>
+        </record>
+
+        <record id="course_3" model="learning.system.types">
+            <field name="name">C / C++</field>
+        </record>
+
+        <record id="course_4" model="learning.system.types">
+            <field name="name">Data Base(My Sql)</field>
+        </record>
+</odoo>
