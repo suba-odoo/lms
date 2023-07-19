@@ -4,6 +4,7 @@ from odoo.exceptions import UserError
 class learning_enrollment(models.Model):
     _name = 'learning.system.enrollment'
     _description = 'Learning Management System'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _log_access = False
 
 

@@ -43,6 +43,11 @@
                         <field name="status"/>
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
+                </div>
             </form>
         </field>
     </record>
@@ -52,11 +57,11 @@
         <field name="name">estate.property.view.kanban</field>
         <field name="model">learning.system.enrollment</field>
         <field name="arch" type="xml">
-            <kanban default_group_by="course_id" records_draggable="False">
+            <kanban default_group_by="course_id" records_draggable="True">
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
-                            <field name="student_id"/>
+                            <strong><field name="student_id"/></strong>
                             <div>
                                 Enrollment Date:
                                 <field name="date"/>
@@ -64,12 +69,12 @@
                             <div t-if="record.status = 'CO'">
                                 State:
                                 <field name="state"/>
-                            </div>                          
+                            </div> 
+                            <progressbar field="status" colors='{"CO": "success", "CA": "danger"}'/>                         
                         </div>
                     </t>
                 </templates>
             </kanban>
         </field>
     </record>
-
 </odoo>

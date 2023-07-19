@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lms_course" model="ir.actions.report">
+        <field name="name">Course Enrollments</field>
+        <field name="model">learning.system.types</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">lms.lms_enrollment_course</field>
+        <field name="report_file">lms.lms_enrollment_course</field>
+        <field name="print_report_name">'Course Enrollments'</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+        <field name="binding_model_id" ref="model_learning_system_types"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="lms_enroll" model="ir.actions.report">
+        <field name="name">Enrollment Students</field>
+        <field name="model">learning.system.enrollment</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">lms.lms_enrollment_student</field>
+        <field name="report_file">lms.lms_enrollment_student</field>
+        <field name="print_report_name">'Enrollments'</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+        <field name="binding_model_id" ref="model_learning_system_enrollment"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
