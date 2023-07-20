@@ -8,7 +8,7 @@ class learning_system_types(models.Model):
     name = fields.Char(string ='Name', required=True)
     course_duration = fields.Char(string ="Course Duration")
     assignment_ids=fields.One2many('learning.system.assignment','course_id')
-    Institute_id = fields.Many2one('res.users',string="Teacher",default=lambda self:self.env.user)
+    Institute_id = fields.Many2one('res.partner', string="Institute") 
     enroll_ids = fields.One2many('learning.system.enrollment','course_id')
     enroll_count = fields.Integer(compute="_compute_offer_count")
 

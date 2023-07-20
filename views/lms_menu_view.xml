@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-    <record id="lms_action" model="ir.actions.act_window">
-        <field name="name">Learning Management System</field>
-        <field name="res_model">learning.system</field>
-        <field name="view_mode">tree,form</field>
-    </record>
     <menuitem id="menu_learning_system" name="LMS">
         <menuitem id="menu_Learning" name="Enrollment">
             <menuitem id = "mennu_action_enroll" name="Enrollment" action="lms_enrollment_action"/>
@@ -17,9 +11,6 @@
             <menuitem id="menu_action_assignments" name= "Assignments" action="lms_assignment_action"/>
             <menuitem id="menu_action_assignment_submission" name="Assignment Submissions" action="lms_assignment_submission_action"/>
             <menuitem id="menu_action_grade" name="Grade" action="lms_grade_action"/>
-        </menuitem>
-        <menuitem id ="menu_enrollment" name="Students">
-            <menuitem id="menu_action_student" name = "Registation" action="lms_action"/>
         </menuitem>
     </menuitem>
 </odoo>

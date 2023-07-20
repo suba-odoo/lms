@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="enrollment_1" model="learning.system.enrollment">
+            <field name="date">2023-07-20</field>
+            <field name="status">CO</field>
+            <field name="state">N</field>
+            <field name="student_id" ref="base.user_demo"/>
+            <field name="course_id" ref="lms.course_1"/>
+        </record>
+
+        <record id="enrollment_2" model="learning.system.enrollment">
+            <field name="date">2023-07-20</field>
+            <field name="status">CO</field>
+            <field name="state">N</field>
+            <field name="student_id" ref="base.user_admin"/>
+            <field name="course_id" ref="lms.course_3"/>
+        </record>
+    </data>
+</odoo>

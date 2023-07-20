@@ -12,61 +12,39 @@
                             <strong>Institute: </strong>
                             <span t-field="course.Institute_id"/>
                         </div>
-                        <t t-call="lms.enrollment_students"/>
+                        <t t-if="course.enroll_ids">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Student Name</th>
+                                        <th>Course Name</th>
+                                        <th>Enrollment Date</th>
+                                        <th>Enrollment Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="enrollment" t-value="course.mapped('enroll_ids')"/>
+                                    <tr t-foreach="enrollment" t-as="enroll">
+                                        <td>
+                                            <span t-field="enroll.student_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="enroll.course_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="enroll.date"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="enroll.state"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+                        <strong t-else="">!!! No Student Enroll This Course !!!</strong>
                     </div>
                 </t>
             </t>
         </t>
-    </template>
-
-    <template id="lms_enrollment_student">
-        <t t-foreach="docs" t-as="student">
-            <t t-call="web.html_container">
-                <t t-call="web.external_layout">
-                    <div class="page">
-                        <h2>
-                            <span t-field="student.student_id"/>
-                        </h2>
-                        <t t-call="lms.enrollment_students"/>
-                    </div>
-                </t>
-            </t>
-        </t>
-    </template>
-
-
-
-
-    <template id="enrollment_students">
-        <t t-if="course.enroll_ids">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Student Name</th>
-                        <th>Course Name</th>
-                        <th>Enrollment Date</th>
-                        <th>Enrollment Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <t t-set="enrollment" t-value="course.mapped('enroll_ids')"/>
-                    <tr t-foreach="enrollment" t-as="enroll">
-                        <td>
-                            <span t-field="enroll.student_id"/>
-                        </td>
-                        <td>
-                            <span t-field="enroll.course_id"/>
-                        </td>
-                        <td>
-                            <span t-field="enroll.date"/>
-                        </td>
-                        <td>
-                            <span t-field="enroll.state"/>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </t>
-        <strong t-else="">!!! No Student Enroll This Course !!!</strong>
     </template>
 </odoo>

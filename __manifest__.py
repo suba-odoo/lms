@@ -7,8 +7,8 @@
     
     'depends' : ['base','mail'],
     'data': [
+        'security/lms_security.xml',
         'security/ir.model.access.csv',
-        'views/lms_views.xml',
         'views/lms_assignment_view.xml',
         'views/lms_enrollment_view.xml',
         'views/lms_course_types_view.xml',
@@ -20,9 +20,9 @@
     
     ],
     'demo' : [
-        'demo/demo.xml',
         'demo/demo_course_types.xml',
         'demo/demo_assignments.xml',
+        'demo/demo_enrollment.xml',
     ], 
     'installable': True,
     'application' : True,

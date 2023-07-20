@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="estate_module">
+        <field name="name">Learning System</field>
+        <field name="description">learning System</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="lms_group_user" model="res.groups">
+        <field name="name">Agent</field>
+        <field name="category_id" ref="base.module_category_education"/>    
+    </record>
+
+    <record id="lms_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="base.module_category_education"/>
+        <field name="implied_ids" eval="[(4, ref('lms_group_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="lms_group_agent_rule" model="ir.rule">
+        <field name="name">Agent rule</field>
+        <field name="model_id" ref="model_learning_system_enrollment"/>
+        <field name="groups" eval="[(4, ref('lms_group_user'))]"/>
+        <field name="domain_force">[
+                '|', ('student_id', '=', user.id),
+                    ('student_id', '=', False)
+        ]</field>
+    </record>
+
+    <record id="lms_group_manager_rule" model="ir.rule">
+        <field name="name">Manager rule</field>
+        <field name="model_id" ref="model_learning_system_enrollment"/>
+        <field name="groups" eval="[(4, ref('lms_group_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+
+
+</odoo>
