@@ -14,6 +14,7 @@
         'views/lms_course_types_view.xml',
         'views/lms_assignment_sub_view.xml',
         'views/lms_grade_view.xml',
+        'views/res_user_view.xml',
         'views/lms_menu_view.xml',
         'report/enrollment_template.xml',
         'report/enrollment_report.xml',
