@@ -6,7 +6,7 @@ class learning_system_types(models.Model):
     _log_access = False
 
     name = fields.Char(string ='Name', required=True)
-    course_duration = fields.Char(string ="Course Duration")
+    course_duration = fields.Char(string ="Course Duration(hours)")
     assignment_ids=fields.One2many('learning.system.assignment','course_id')
     Institute_id = fields.Many2one('res.partner', string="Institute") 
     enroll_ids = fields.One2many('learning.system.enrollment','course_id')

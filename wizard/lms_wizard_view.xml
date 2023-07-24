@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="lms_wizard_view_form" model="ir.ui.view">
+        <field name="name">lms.wizard.view.form</field>
+        <field name="model">lms.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Wizard">
+                <sheet>
+                    <group>
+                        <field name="aname"/>
+                        <field name="validity"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    <!-- <button string="Save" class="btn-secondary" special="save"/> -->
+                    <button name="add_assignment" string = "Add Assignment" type="object" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="lms_wizard_action" model="ir.actions.act_window">  
+        <field name="name">Lms Wizard</field>    
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lms.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="lms_wizard_view_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

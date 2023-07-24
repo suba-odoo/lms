@@ -10,6 +10,7 @@
         'security/lms_security.xml',
         'security/ir.model.access.csv',
         'views/lms_assignment_view.xml',
+        'wizard/lms_wizard_view.xml',
         'views/lms_enrollment_view.xml',
         'views/lms_course_types_view.xml',
         'views/lms_assignment_sub_view.xml',

@@ -12,5 +12,8 @@
             <menuitem id="menu_action_assignment_submission" name="Assignment Submissions" action="lms_assignment_submission_action"/>
             <menuitem id="menu_action_grade" name="Grade" action="lms_grade_action"/>
         </menuitem>
+        <!-- <menuitem id="menu_wizard" name="wizard">
+            <menuitem id="menu_action_wizard" name="Wizard" action="lms_wizard_action"/>
+        </menuitem> -->
     </menuitem>
 </odoo>

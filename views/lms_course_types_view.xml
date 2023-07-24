@@ -17,6 +17,9 @@
         <field name="model">learning.system.types</field>
         <field name="arch" type="xml">
             <tree>
+                <header>
+                    <button string="Add Assignments" name="%(lms_wizard_action)d" type="action" class="btn-secondary"/>
+                </header>
                 <field name="name"/>
                 <field name="Institute_id"/>
                 <field name="course_duration"/>
