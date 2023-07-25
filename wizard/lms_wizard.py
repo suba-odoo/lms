@@ -5,7 +5,7 @@ class lms_wizard(models.TransientModel):
     _description = "Lms Wizard"
 
     name = fields.Char(string ='Name')
-    aname = fields.Selection(string = 'Assignment Type', selection=[('quiz', 'Quiz'), ('test', 'Test'), ('mcq', 'MCQ')],required = True)
+    aname = fields.Char(string = 'Assignment Name',required = True)
     validity = fields.Integer(string = 'validity(days)', default= 10)
     status = fields.Selection(string = 'Status', selection=[('N','New'), ('P','Process'), ('C','Completed')], default="N")
 

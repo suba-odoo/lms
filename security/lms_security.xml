@@ -7,7 +7,7 @@
     </record>
 
     <record id="lms_group_user" model="res.groups">
-        <field name="name">Agent</field>
+        <field name="name">user</field>
         <field name="category_id" ref="base.module_category_education"/>    
     </record>
 

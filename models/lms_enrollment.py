@@ -10,9 +10,11 @@ class learning_enrollment(models.Model):
 
     date = fields.Date(string="EnrollmentDate",default=lambda self:fields.Date.today())
     status=fields.Selection(selection=[("CO","conform"),("CA","cancel")],copy= False)
-    student_id = fields.Many2one('res.users',string="Student")
+    student_id = fields.Many2one('res.users',string="Student",default=lambda self:self.env.user)
     course_id = fields.Many2one('learning.system.types',string="Course Name",required = True,copy=False)
     state = fields.Selection(string = 'State', selection=[('N','New'), ('P','Process'), ('C','Completed'),('CO','Close')],default='N')
+    image = fields.Binary('Image',related='student_id.image_medium')
+
 
 
     def action_conform(self):

@@ -5,7 +5,7 @@ class learning_assignment_submission(models.Model):
     _name = 'learning.system.assignment.submission'
     _description = 'Learning Management System'
 
-    submission_date = fields.Date(string='Submission Date',required=True)
+    submission_date = fields.Date(string='Submission Date',default=lambda self:fields.Date.today())
     file_type = fields.Selection(string="File Type",selection=[('P','Pdf'),('D','Doc'),('T','Text')])
     student_id = fields.Many2one('res.users',string="Student",default=lambda self:self.env.user)
     assignment_id = fields.Many2one('learning.system.assignment',string="Assignment Name",copy=False)

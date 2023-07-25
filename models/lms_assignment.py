@@ -6,12 +6,13 @@ class learning_assignment(models.Model):
     _description = 'Learning Management System'
 
 
-    name = fields.Selection(string = 'Assignment Type', selection=[('quiz', 'Quiz'), ('test', 'Test'), ('mcq', 'MCQ')],required = True)
+    name = fields.Char(string = 'Assignment Type',required = True)
     description = fields.Char(string = "description")
     course_id = fields.Many2one("learning.system.types", required=True)
-    validity = fields.Integer(string = 'validity(days)', default= 0)
+    validity = fields.Integer(string = 'validity(days)', default= 10)
     date_deadline = fields.Date(string = 'Assignment_deadline', compute="_compute_date_deadline", inverse="_inverse_date_deadline")
-    status = fields.Selection(string = 'Status', selection=[('N','New'), ('P','Process'), ('C','Completed')])
+    status = fields.Selection(string = 'Status', selection=[('N','New'), ('P','Process'), ('C','Completed')], default= 'N')
+    color = fields.Integer("Color")
 
     @api.depends( "validity","create_date")
     def _compute_date_deadline(self):

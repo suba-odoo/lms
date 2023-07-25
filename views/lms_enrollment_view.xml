@@ -38,6 +38,7 @@
                     <button name="action_cancel" type="object" string="caneled" states= "N"/>
                 </header>
                 <sheet>
+                    <field name="image" widget='image' nolabel='1' class="oe_avatar" />
                     <group>
                         <field name="student_id"/>
                         <field name="course_id"/>
@@ -64,6 +65,9 @@
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <field name="image" widget="image" options="{'preview_image': 'image'}"/>
+                            </div>
                             <strong><field name="student_id"/></strong>
                             <div>
                                 Enrollment Date:
