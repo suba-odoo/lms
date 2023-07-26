@@ -4,6 +4,8 @@ class learning_system_types(models.Model):
     _name = 'learning.system.types'
     _description = 'Learning Management System'
     _log_access = False
+    _sql_constraints = [
+        ('uniq_name', 'unique(name)', 'course name must be unique')]
 
     name = fields.Char(string ='Name', required=True)
     course_duration = fields.Char(string ="Course Duration(hours)")
