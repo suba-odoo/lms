@@ -5,7 +5,7 @@
     'description': """The learning management (LSM) Application is a 
     web-based platform designed to manage online educational courses.""",
     
-    'depends' : ['base','mail'],
+    'depends' : ['website','base','mail'],
     'data': [
         'security/lms_security.xml',
         'security/ir.model.access.csv',
@@ -15,6 +15,7 @@
         'views/lms_course_types_view.xml',
         'views/lms_assignment_sub_view.xml',
         'views/lms_grade_view.xml',
+        'views/template.xml',
         'views/res_user_view.xml',
         'views/lms_menu_view.xml',
         'report/enrollment_template.xml',
