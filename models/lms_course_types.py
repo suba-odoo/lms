@@ -7,7 +7,7 @@ class learning_system_types(models.Model):
         ('uniq_name', 'unique(name)', 'course name must be unique')]
 
     name = fields.Char(string ='Name', required=True)
-    course_duration = fields.Char(string ="Course Duration(hours)")
+    course_duration = fields.Char(string ="Course Duration(hours)",required=True)
     assignment_ids=fields.One2many('learning.system.assignment','course_id')
     Institute_id = fields.Many2one('res.partner', string="Institute") 
     enroll_ids = fields.One2many('learning.system.enrollment','course_id')
